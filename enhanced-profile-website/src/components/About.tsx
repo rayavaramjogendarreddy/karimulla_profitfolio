@@ -54,7 +54,7 @@ const About = () => {
     },
   ];
 
-  const objectives = ["Education", "Rural Development", "Awareness Programs", "Food Distribution", "Community Welfare", "Youth Empowerment","Old Age Home","Child Home"];
+  const objectives = ["Education", "Rural Development", "Awareness Programs", "Food Distribution", "Community Welfare", "Youth Empowerment","Old Age Home","Bala Vihar (Child Home)"];
 
   return (
     <section ref={sectionRef} id="about" className="py-20 bg-muted relative overflow-hidden">

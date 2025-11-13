@@ -10,6 +10,7 @@ A modern, enhanced portfolio website for Dr. Shaik Karimulla featuring advanced 
 - **About Section**: Scroll-triggered animations, enhanced cards with hover effects
 - **Impact/Statistics Section**: Animated counters showing achievements (NEW)
 - **Awards Section**: Year-based filtering, category badges, star indicators
+- **Gallery Section**: Photo gallery with popup viewer and download functionality (NEW)
 - **Contact Section**: Color-coded gradient cards, enhanced interactions
 - **Navigation**: Active section highlighting, smooth transitions
 - **Footer**: Three-column layout, scroll-to-top button, quick links
@@ -78,6 +79,7 @@ enhanced-profile-website/
 │   │   ├── About.tsx          # Enhanced about section
 │   │   ├── Impact.tsx         # NEW: Impact/Statistics section
 │   │   ├── Awards.tsx         # Enhanced awards with filtering
+│   │   ├── Gallery.tsx        # NEW: Photo gallery with popup viewer
 │   │   ├── Contact.tsx        # Enhanced contact section
 │   │   ├── Navigation.tsx     # Enhanced navigation
 │   │   ├── Footer.tsx         # Enhanced footer
@@ -139,6 +141,62 @@ enhanced-profile-website/
 - Three-column layout
 - Scroll-to-top button
 - Quick navigation links
+
+### 8. Gallery Section (NEW)
+- Two subsections: "Personal Moments" and "Awards & Recognition"
+- Responsive grid layout (2-4 columns)
+- Click to view images in full-screen popup
+- Download button in popup (top-left corner)
+- Smooth hover animations
+
+## 📸 Updating Gallery Photos
+
+To add or update photos in the gallery:
+
+1. **Open the Gallery component**:
+   ```
+   src/components/Gallery.tsx
+   ```
+
+2. **Locate the image arrays** (around lines 30-100):
+   - `personalMoments` - For personal service photos
+   - `awardsRecognition` - For awards and recognition photos
+
+3. **Update image URLs**:
+   ```typescript
+   const personalMoments = [
+     {
+       id: 1,
+       url: "YOUR_IMAGE_URL_HERE",  // Replace with your image URL
+       alt: "Description of image",
+       title: "Image Title"
+     },
+     // Add more images...
+   ];
+   ```
+
+4. **Image URL options**:
+   - **Online images**: Use direct URLs (e.g., from your hosting service)
+   - **Local images**: 
+     - Place images in `public/gallery/` folder
+     - Reference as: `url: "/gallery/your-image.jpg"`
+   - **Unsplash** (placeholder): `https://images.unsplash.com/photo-xxxxx`
+
+5. **Best practices**:
+   - Use high-quality images (recommended: 800x800px or larger)
+   - Keep file sizes optimized (under 500KB per image)
+   - Use descriptive `alt` text for accessibility
+   - Use meaningful `title` that appears on hover
+
+6. **Example**:
+   ```typescript
+   {
+     id: 1,
+     url: "/gallery/community-service-2024.jpg",
+     alt: "Dr. Karimulla at community service event 2024",
+     title: "Community Service 2024"
+   }
+   ```
 
 ## 🛠️ Technologies Used
 
