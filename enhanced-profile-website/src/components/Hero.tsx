@@ -81,11 +81,16 @@ const Hero = () => {
                 Dr.Shaik Karimulla
               </h1>
               <p className="text-xl md:text-2xl lg:text-3xl text-secondary font-semibold">
-                Founder & Chairman
+                Founder & Managing Trustee
               </p>
-              <p className="text-lg md:text-xl text-primary-foreground/80 mt-2 font-medium">
+              <a 
+                href="https://yuvatejamtrust.org" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-block text-lg md:text-xl text-primary-foreground/80 mt-2 font-medium hover:text-secondary transition-colors underline decoration-secondary/30 underline-offset-4"
+              >
                 Yuvatejam Trust
-              </p>
+              </a>
             </div>
 
             <div className="space-y-4 text-primary-foreground/90 pt-4">

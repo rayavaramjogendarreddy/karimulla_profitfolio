@@ -20,14 +20,22 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* About section */}
             <div>
-              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                <Heart className="w-5 h-5 text-accent fill-accent" />
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2 text-secondary">
+                <Heart className="w-5 h-5 text-secondary fill-secondary" />
                 Yuvatejam Trust
               </h3>
-              <p className="text-primary-foreground/80 leading-relaxed">
+              <p className="text-primary-foreground/80 leading-relaxed mb-4">
                 Dedicated to creating positive change through education, rural development, 
                 and community welfare initiatives.
               </p>
+              <a 
+                href="https://yuvatejamtrust.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-secondary hover:text-secondary/80 font-semibold transition-colors flex items-center gap-2 border-b border-secondary/30 w-fit"
+              >
+                Learn More at yuvatejamtrust.org
+              </a>
             </div>
 
             {/* Quick links */}

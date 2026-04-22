@@ -54,7 +54,16 @@ const About = () => {
     },
   ];
 
-  const objectives = ["Education", "Rural Development", "Awareness Programs", "Food Distribution", "Community Welfare", "Youth Empowerment","Old Age Home","Bala Vihar (Child Home)"];
+  const objectives = [
+    { title: "Education", description: "Providing quality learning opportunities for underprivileged children." },
+    { title: "Rural Development", description: "Improving infrastructure and livelihood in rural areas." },
+    { title: "Awareness Programs", description: "Educating communities on social, health, and legal rights." },
+    { title: "Food Distribution", description: "Ensuring no one in our community goes hungry." },
+    { title: "Community Welfare", description: "Supporting the destitute and marginalized sections of society." },
+    { title: "Youth Empowerment", description: "Training and mentoring the next generation of leaders." },
+    { title: "Old Age Home", description: "Providing dignity and care for our senior citizens." },
+    { title: "Bala Vihar", description: "A safe and nurturing home for children in need." }
+  ];
 
   return (
     <section ref={sectionRef} id="about" className="py-20 bg-muted relative overflow-hidden">
@@ -71,118 +80,128 @@ const About = () => {
               <Users className="w-10 h-10 text-primary-foreground" />
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
-              About Dr.Shaik Karimulla
+              Founder Profile
             </h2>
             <div className="w-24 h-1 bg-gradient-secondary mx-auto mb-6" />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              A visionary social worker making a significant impact through dedicated service
+              Dr. Shaik Karimulla: A life dedicated to service and social transformation.
             </p>
           </div>
 
-          <div className={`grid md:grid-cols-2 gap-8 mb-12 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <Card className="shadow-card hover:shadow-elegant transition-all duration-300 border-0 group overflow-hidden relative">
+          {/* Profile Summary & Vision/Mission */}
+          <div className={`grid lg:grid-cols-3 gap-8 mb-12 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <Card className="lg:col-span-2 shadow-card hover:shadow-elegant transition-all duration-300 border-0 group overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-secondary opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
-              <CardContent className="p-8 relative">
-                <div className="flex items-center gap-3 mb-4">
+              <CardContent className="p-8 relative h-full flex flex-col">
+                <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-gradient-secondary rounded-lg flex items-center justify-center">
                     <Heart className="w-6 h-6 text-primary-foreground" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">About Me</h3>
+                  <h3 className="text-2xl font-bold text-foreground">Profile Summary</h3>
                 </div>
-                <p className="text-muted-foreground leading-relaxed text-lg">
-                  Dr.Shaik Karimulla, belongs to a lower middle-class family. He has been very interested in social work since his childhood, with the inspiration of many social activists. By seeing the drastic lives of many people suffering due to various social issues and pathetic situations of marginalized sections who have been taking shelter in the streets, choultries, railway stations and bus stands, he felt ashamed and thought about doing something to such people. Hence, he established Yuvatejam Trust in 2015 with two like-minded friends, which was later registered in 2017, to serve without any self-benefit for the welfare of the destitute and has been awarded as a committed social activist by some local and national social institutions.
-                </p>
+                <div className="text-muted-foreground leading-relaxed text-lg space-y-4">
+                  <p>
+                    Hailing from a humble background, Dr. Shaik Karimulla has been driven by a profound passion for social service since childhood. Inspired by legendary social activists, he dedicated his life to addressing the systemic issues facing marginalized communities.
+                  </p>
+                  <p>
+                    Witnessing the plight of those living on the streets, in railway stations, and bus stands, he felt a deeper calling to serve. In 2015, he co-founded **Yuvatejam Trust** (formally registered in 2017) with a singular mission: to provide selfless service for the welfare of the destitute and neglected sections of society.
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-elegant transition-all duration-300 border-0 group overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-secondary opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
-              <CardContent className="p-8 relative">
-                <div className="flex items-center gap-3 mb-4">
+            <Card className="shadow-card hover:shadow-elegant transition-all duration-300 border-0 group overflow-hidden relative bg-gradient-to-br from-background to-muted">
+              <CardContent className="p-8 relative h-full flex flex-col">
+                <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-gradient-secondary rounded-lg flex items-center justify-center">
                     <GraduationCap className="w-6 h-6 text-primary-foreground" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">Education & Background</h3>
+                  <h3 className="text-2xl font-bold text-foreground">Background</h3>
                 </div>
-                <div className="space-y-4 text-muted-foreground">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-secondary rounded-full" />
-                    <p><strong className="text-foreground">Education:</strong> BA Degree</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Globe className="w-5 h-5 text-secondary" />
-                    <p><strong className="text-foreground">Languages:</strong> Urdu, Telugu, Hindi, English</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-secondary rounded-full" />
-                    <p><strong className="text-foreground">Location:</strong> Tirupathi, Andhra Pradesh</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className={`mb-12 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <Card className="shadow-elegant border-0 bg-gradient-to-br from-background to-muted group overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-secondary opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-              <CardContent className="p-8 md:p-12 relative">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-secondary rounded-xl flex items-center justify-center shadow-elegant">
-                    <Target className="w-8 h-8 text-primary-foreground" />
+                <div className="space-y-6 text-muted-foreground">
+                  <div>
+                    <p className="text-sm uppercase tracking-wider font-semibold text-secondary mb-1">Education</p>
+                    <p className="text-foreground font-medium">B.A. Degree & Honorary Doctorate</p>
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-foreground mb-2">Yuvatejam Trust</h3>
-                    <div className="flex flex-col gap-1 text-muted-foreground">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        <span className="font-semibold">Established: 2015</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        <span className="font-semibold">Registered: 2017</span>
-                      </div>
+                    <p className="text-sm uppercase tracking-wider font-semibold text-secondary mb-1">Languages</p>
+                    <p className="text-foreground font-medium">Urdu, Telugu, Hindi, English</p>
+                  </div>
+                  <div>
+                    <p className="text-sm uppercase tracking-wider font-semibold text-secondary mb-1">Location</p>
+                    <div className="flex items-center gap-2 text-foreground font-medium">
+                      <Globe className="w-4 h-4 text-secondary" />
+                      <span>Tirupathi, Andhra Pradesh</span>
                     </div>
                   </div>
                 </div>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Founded with a vision to create lasting positive change in communities through comprehensive social welfare programs.
-                </p>
-                <div>
-                  <p className="font-semibold text-foreground mb-4 text-lg">Core Objectives:</p>
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {objectives.map((objective, index) => (
-                      <div 
-                        key={objective} 
-                        className="flex items-center gap-3 p-3 rounded-lg bg-background/50 hover:bg-background transition-colors group/item"
-                        style={{ animationDelay: `${index * 50}ms` }}
-                      >
-                        <div className="w-2 h-2 bg-secondary rounded-full group-hover/item:scale-150 transition-transform" />
-                        <span className="text-muted-foreground group-hover/item:text-foreground transition-colors font-medium">{objective}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </div>
 
-          <div className={`grid sm:grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            {highlights.map((item, index) => (
-              <Card 
-                key={index}
-                className="shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 border-0 group overflow-hidden relative"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-                <CardContent className="p-6 text-center relative">
-                  <div className="w-16 h-16 bg-gradient-secondary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-elegant">
-                    <item.icon className="w-8 h-8 text-primary-foreground" />
-                  </div>
-                  <h4 className="font-bold text-foreground mb-2 text-lg group-hover:text-secondary transition-colors">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          {/* Vision & Mission */}
+          <div className={`grid md:grid-cols-2 gap-8 mb-12 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <Card className="shadow-card border-0 bg-primary/5 hover:bg-primary/10 transition-colors">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
+                  <Target className="w-6 h-6 text-secondary" /> Our Vision
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  To create lasting, positive change in communities through comprehensive social welfare programs. We believe education and basic dignity are rights that should be accessible to every individual, regardless of their socio-economic background.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="shadow-card border-0 bg-secondary/5 hover:bg-secondary/10 transition-colors">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
+                  <BookOpen className="w-6 h-6 text-secondary" /> Our Mission
+                </h3>
+                <ul className="text-muted-foreground space-y-2 list-disc list-inside">
+                  <li>Empower underprivileged youth through education and vocational training.</li>
+                  <li>Bridge the gap between community needs and organizational resources.</li>
+                  <li>Promote civic-driven change through active community participation.</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Key Contributions */}
+          <div className={`mb-12 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 bg-gradient-secondary rounded-lg flex items-center justify-center">
+                  <Award className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <h3 className="text-3xl font-bold text-foreground">Key Contributions & Focus Areas</h3>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {objectives.map((objective, index) => (
+                <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-all group">
+                  <CardContent className="p-6">
+                    <div className="w-2 h-12 bg-secondary/20 group-hover:bg-secondary absolute left-0 top-1/2 -translate-y-1/2 transition-all rounded-r" />
+                    <h4 className="font-bold text-foreground mb-2">{objective.title}</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{objective.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Founder's Message */}
+          <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <Card className="shadow-elegant border-0 bg-gradient-to-br from-secondary/10 to-primary/10 overflow-hidden relative border-l-4 border-secondary">
+              <CardContent className="p-10 md:p-14 relative italic text-center">
+                <div className="absolute top-4 left-4 opacity-10">
+                  <Heart className="w-24 h-24 text-secondary" />
+                </div>
+                <p className="text-2xl md:text-3xl font-medium text-foreground mb-8 leading-relaxed">
+                  "Social service is not a choice, but a responsibility we owe to humanity. At Yuvatejam Trust, we believe that by uplifting the most vulnerable, we strengthen the foundation of our entire society."
+                </p>
+                <div className="mt-6">
+                  <p className="font-bold text-xl text-foreground">— Dr. Shaik Karimulla</p>
+                  <p className="text-muted-foreground">Founder & Managing Trustee</p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

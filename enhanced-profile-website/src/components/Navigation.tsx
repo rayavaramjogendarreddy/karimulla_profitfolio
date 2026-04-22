@@ -83,6 +83,16 @@ const Navigation = () => {
                   )}
                 </button>
               ))}
+              <a 
+                href="https://yuvatejamtrust.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="ml-4"
+              >
+                <Button variant="secondary" size="sm" className="shadow-elegant hover:scale-105 transition-transform">
+                  Visit Trust
+                </Button>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -123,6 +133,16 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
+            <a 
+              href="https://yuvatejamtrust.org" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-4 mt-4"
+            >
+              <Button variant="secondary" size="lg" className="w-full shadow-elegant">
+                Visit Yuvatejam Trust
+              </Button>
+            </a>
           </div>
         </div>
       </div>

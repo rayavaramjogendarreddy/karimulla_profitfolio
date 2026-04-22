@@ -35,7 +35,7 @@ const Impact = () => {
     const steps = 60;
     const interval = duration / steps;
 
-    const targets = { awards: 24, years: 8, programs: 6, communities: 100 };
+    const targets = { awards: 24, years: 11, programs: 8, communities: 100 };
 
     let step = 0;
     const timer = setInterval(() => {
