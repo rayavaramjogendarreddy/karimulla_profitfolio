@@ -54,6 +54,9 @@ const Awards = () => {
     { year: "2025", title: "Abdul Kalam Nandhi Puraskaram", category: "Excellence" },
     { year: "2025", title: "Dr.A.P.J. Abdul Kalam Excellence Award", category: "Excellence" },
     { year: "2025", title: "London Book of World Records", category: "International" },
+    { year: "2026", title: "Mera Bharath Mahan Exclesive award", category: "National" },
+    { year: "2026", title: "Utthama Prathiba Ugadi Puraskaram", category: "National" },
+    { year: "2026", title: "Spurthipradatha Social service Award", category: "National" },
   ];
 
   const years = Array.from(new Set(awards.map(a => a.year.split(" & ")[0]))).sort();
